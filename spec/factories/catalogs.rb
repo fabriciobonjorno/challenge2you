@@ -1,16 +1,16 @@
 FactoryBot.define do
   factory :catalog do
-    show_id { "MyString" }
-    platform { "MyString" }
-    title { "MyString" }
-    director { "MyString" }
-    cast { "MyString" }
-    country { "MyString" }
-    date_added { "2022-03-16" }
-    release_year { 1 }
-    rating { "MyString" }
-    duration { "MyString" }
-    listed_in { "MyString" }
-    description { "MyText" }
+    sequence(:show_id) { |n| "s #{n}" }
+    platform { ['Movie', 'TV Box'].sample }
+    title { Faker::Movie.title }
+    director { Faker::Name.name }
+    cast { Faker::Name.name }
+    country { Faker::Address.country }
+    date_added { Faker::Date.between(from: '2014-09-23', to: '2014-09-25') }
+    release_year { rand(2000..2022) }
+    sequence(:rating) { |n| "R #{n}" }
+    duration { "#{rand(80..150)} min" }
+    listed_in { Faker::Movie.quote }
+    description { Faker::Lorem.paragraphs }
   end
 end
