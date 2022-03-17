@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Catalog, type: :model do
   it { is_expected.to validate_presence_of(:show_id) }
   it { is_expected.to validate_uniqueness_of(:show_id).case_insensitive }
-  it { is_expected.to validate_presence_of(:platform) }
+  it { is_expected.to validate_presence_of(:genre) }
   it { is_expected.to validate_presence_of(:title) }
   it { is_expected.to validate_presence_of(:director) }
   it { is_expected.to validate_presence_of(:release_year) }

@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2022_03_16_170503) do
 
   create_table "catalogs", force: :cascade do |t|
     t.string "show_id"
-    t.string "platform"
+    t.string "genre"
     t.string "title"
     t.string "director"
     t.string "cast"
@@ -30,6 +30,18 @@ ActiveRecord::Schema.define(version: 2022_03_16_170503) do
     t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["cast"], name: "index_catalogs_on_cast"
+    t.index ["country"], name: "index_catalogs_on_country"
+    t.index ["date_added"], name: "index_catalogs_on_date_added"
+    t.index ["description"], name: "index_catalogs_on_description"
+    t.index ["director"], name: "index_catalogs_on_director"
+    t.index ["duration"], name: "index_catalogs_on_duration"
+    t.index ["genre"], name: "index_catalogs_on_genre"
+    t.index ["listed_in"], name: "index_catalogs_on_listed_in"
+    t.index ["rating"], name: "index_catalogs_on_rating"
+    t.index ["release_year"], name: "index_catalogs_on_release_year"
+    t.index ["show_id"], name: "index_catalogs_on_show_id"
+    t.index ["title"], name: "index_catalogs_on_title"
   end
 
 end
