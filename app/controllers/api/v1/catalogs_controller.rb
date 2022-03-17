@@ -7,7 +7,8 @@ module Api
       end
 
       def import
-        Catalog.import_from_csv(params[:file])
+        file = params[:file]
+        ImportCatalogsService.new(file).call
         redirect_to api_v1_catalogs_path, notice: "Activity Data Imported"
       end
     end
