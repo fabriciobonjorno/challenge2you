@@ -2,6 +2,11 @@ require 'rails_helper'
 
 RSpec.describe "Api::V1::Catalogs", type: :request do
   describe "GET /index" do
-    pending "add some examples (or delete) #{__FILE__}"
+    before do
+      get '/api/v1/catalogs'
+    end
+    it "returns http success" do
+      expect(response).to have_http_status(:success)
+    end
   end
 end
