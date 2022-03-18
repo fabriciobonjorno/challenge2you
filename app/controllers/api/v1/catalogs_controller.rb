@@ -10,7 +10,7 @@ module Api
       def import
         file = params[:file]
         ImportCatalogsService.new(file).call
-        redirect_to api_v1_catalogs_path, notice: "Activity Data Imported"
+        render(json: { message: "Activity Data Imported" }, status: :ok)
       end
 
       private
