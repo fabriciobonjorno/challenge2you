@@ -70,3 +70,10 @@ We have 2 base scopes:
 
 - **/catalogs/import**
   ![import](https://user-images.githubusercontent.com/28460996/158917290-0dc74834-d671-4744-9287-1c755556aa08.png)
+  
+
+To perform the searches, just inform the parameters as shown in the example. 
+exemple:
+- **/catalogs?release_year=2020&genre=movie&country=united** 
+  ![filter](https://user-images.githubusercontent.com/28460996/158925007-8731d537-d7e4-4a2b-92e8-1582776795fb.png)
+
