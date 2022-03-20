@@ -22,13 +22,8 @@ Ok, so first you must have:
 
 2. Ruby >= 3.0.3 installed.
 
-3. As we're on the beginning of project, don't forget to right configure your `datatabe.yml`.
+3. As we're on the beginning of project, don't forget to right configure your `datatabe.yml`. In the project there are 2 database examples, one for use with Docker and one without Docker.
 
-4. And to *bundle* it with command:
-
-```
-bundle install
-```
 As soon as you have everything done you can follow
 
 
@@ -36,19 +31,47 @@ As soon as you have everything done you can follow
 
 If you want to rock and create your dev environment and data, it's possible to go through the usual way
 
-1. Create databases
+1. And to *bundle* it with command:
+```
+bundle install
+```
+
+2. Create databases
 ```
 rails db:create
 ```
 
-2. Run migrations
+3. Run migrations
 ```
 rails db:migrate
 ```
 
-3. Start the server
+### 2. Building everything with docker
+
+If you want to use Docker to create your development and data environment, you can follow the path below.
+
+#### Necessary documentation:
+- [Docker](https://docs.docker.com/engine/install/ubuntu/)
+- [Docker Compose](https://docs.docker.com/compose/install/)
+
+1. Building the project
 ```
-rails s
+docker-compose build
+```
+
+2. Start the application
+```
+docker-compose up
+```
+
+3. Create database
+```
+docker-compose run web rails db:create
+```
+
+4. Run migrations
+```
+docker-compose run web rails db:migrate
 ```
 
 If you want to run tests: 
