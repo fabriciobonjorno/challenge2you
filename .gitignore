@@ -28,4 +28,3 @@
 
 # Ignore Databases
 /config/database.yml
-database.yml
