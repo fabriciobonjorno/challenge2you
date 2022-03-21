@@ -6,8 +6,8 @@ It was designed thinking to list a catalog of movies and series, where it is pos
 
 ## Stack
 
-- Rails 6.1.5
-- ruby 3.0.3
+- Rails 7.0.2.3
+- ruby 3.1.1
 - Postgres
 
 ## How to use it?
@@ -20,7 +20,7 @@ Ok, so first you must have:
 
 1. Postgres installed.
 
-2. Ruby >= 3.0.3 installed.
+2. Ruby >= 3.1.1 installed.
 
 3. As we're on the beginning of project, don't forget to right configure your `datatabe.yml`. In the project there are 2 database examples, one for use with Docker and one without Docker.
 
