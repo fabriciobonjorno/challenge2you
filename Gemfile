@@ -5,7 +5,7 @@ ruby '3.1.1'
 
 gem 'rails', '~> 7.0.2.3'
 gem 'pg', '~> 1.1'
-gem 'puma', '~> 5.0'
+gem 'puma', '~> 5.6'
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'rack-cors'
 
